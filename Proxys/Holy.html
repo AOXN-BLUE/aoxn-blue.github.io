@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Unblocker</title>
+  <link rel="icon" type="image/png" href="/Icons/hb.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('back.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow-x: hidden;
+      /* Prevent horizontal scrollbar */
+    }
+
+    #main-content {
+      flex-grow: 1;
+      overflow: hidden;
+      display: flex;
+    }
+
+    #website-iframe {
+      width: 100%;
+      height: 850px;
+      border: none;
+    }
+
+    .menu-icon {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      /* Ensure the menu icon is on top of everything */
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      left: -250px;
+      /* Move sidebar out of the viewport */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      transition: left 0.5s;
+      z-index: 999;
+      /* Ensure the sidebar is below the menu icon */
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .tab {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .tab:hover {
+      color: #4355de;
+    }
+  </style>
+</head>
+<div id="main-content">
+  <iframe id="website-iframe" src="https://mt6qyv-8080.csb.app/"></iframe>
+</div>
+
+<body>
+  <div class="menu-icon">&#9776;</div>
+  <div class="sidebar animate__animated animate__fadeInLeft">
+    <div class="tabs">
+      <a class="tab" href="">AOXN BLUE</a>
+      <a class="tab" href=""></a>
+      <a class="tab" href="/index.html">Home</a>
+      <a class="tab" href="/Games.html">Games</a>
+      <a class="tab" href="/Browsers.html">Browser</a>
+      <a class="tab" href="/Apps.html">Apps</a>
+      <a class="tab" href="https://discord.gg/5srBjvVhcK">Discord</a>
+      <a class="tab" href="/Other.html">Other</a>
+    </div>
+  </div>
+
+
+  <script>
+    alert("USE HAMMERHEAD CAUSE STOMP AND ULTRAVIOLET DOESN'T WORK CAUSE AOXN-BLUE SELF HOSTED SO IT MAY NOT WORK USE NEBULA OR SHADOW")
+    const menuIcon = document.querySelector('.menu-icon');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuIcon.addEventListener('click', () => {
+      if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px';
+      } else {
+        sidebar.style.left = '0px';
+      }
+    });
+  </script>
+</body>
+
+</html>

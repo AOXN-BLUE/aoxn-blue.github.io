@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOXN BLUE</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('back.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .menu-icon {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      left: -250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      transition: left 0.5s;
+      z-index: 999;
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .tab {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .tab:hover {
+      color: #4355de;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .item-icon {
+      margin-bottom: 10px;
+    }
+
+    .item-icon img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .item-name {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-icon">&#9776;</div>
+  <div class="sidebar animate__animated animate__fadeInLeft">
+    <div class="tabs">
+      <a class="tab" href="">AOXN BLUE</a>
+      <a class="tab" href=""></a>
+      <a class="tab" href="index.html">Home</a>
+      <a class="tab" href="Games.html">Games</a>
+      <a class="tab" href="Browsers.html">Browser</a>
+      <a class="tab" href="Apps.html">Apps</a>
+      <a class="tab" href="https://discord.gg/5srBjvVhcK">Discord</a>
+      <a class="tab" href="Other.html">Other</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="item">
+      <div class="item-icon"><img src="favicon.png" alt="Icon 1"></div>
+      <div class="item-name">Github</div>
+      <a class="tab" href="https://aoxn-blue.github.io">Open</a>
+    </div>
+    <div class="item">
+      <div class="item-icon"><img src="favicon.png" alt="Icon 2"></div>
+      <div class="item-name">Bitbucket</div>
+      <a class="tab" href="https://physicsnumberlearning.bitbucket.io">Open</a>
+    </div>
+    <div class="item">
+      <div class="item-icon"><img src="favicon.png" alt="Icon 2"></div>
+      <div class="item-name">Repl.co</div>
+      <a class="tab" href="https://queasysuperbgreenware.mystic-craft.repl.co/">Open</a>
+    </div>
+    <div class="item">
+      <div class="item-icon"><img src="Icons/DC.png" alt="Icon 2"></div>
+      <div class="item-name">Discord</div>
+      <a class="tab" href="https://discord.gg/5srBjvVhcK">Open</a>
+    </div>
+  </div>
+
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuIcon.addEventListener('click', () => {
+      if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px';
+      } else {
+        sidebar.style.left = '0px';
+      }
+    });
+  </script>
+</body>
+
+</html>
